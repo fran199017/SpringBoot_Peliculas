@@ -1,5 +1,5 @@
 # SpringBoot_Peliculas
-***NOTA IMPORTANTE***
+***NOTA IMPORTANTE***  PROYECTO EN PROCESO
 
 *Hay que crear la DB dbpeliculas2. Para ello he utilizado WampServer con PHPMyAdmin.
 
