@@ -8,6 +8,6 @@
 *Aconsejable uso de mozilla para acceder a los listados. (El propio navegador de Spring Tool,  descarga el JSON).
 
 
-![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/spring-boot-webv4/captura1.png)
-![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/spring-boot-webv4/captura2.png)
-![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/spring-boot-webv4/captura3.png)
+![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/captura1.png)
+![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/captura2.png)
+![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/captura3.png)
