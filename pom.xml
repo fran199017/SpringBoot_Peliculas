@@ -81,7 +81,7 @@
 
 </dependencies>
 
-<!--  	<build>
+  	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -89,17 +89,7 @@
 			</plugin>
 		</plugins>
 			
-	</build>-->
-	 <build>
-    <plugins>
-      <plugin>
-        <groupId>com.heroku.sdk</groupId>
-        <artifactId>heroku-maven-plugin</artifactId>
-        <version>3.0.3</version>
-      </plugin>
-    </plugins>
-  </build>
-	
+	</build>
 	
 
 </project>
