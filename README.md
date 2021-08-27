@@ -6,3 +6,10 @@
 *Las tablas, se crean solas de las propias entidades y configuradas en el application.properties.
 *Para insertar los datos, basta con utilizar el boton del navbar Insertar datos.
 *Aconsejable uso de mozilla para acceder a los listados. (El propio navegador de Spring Tool,  descarga el JSON).
+
+
+https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/spring-boot-webv4/Captura1.png
+
+https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/spring-boot-webv4/Captura2.png
+
+https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/spring-boot-webv4/Captura3.png
