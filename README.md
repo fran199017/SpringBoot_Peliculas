@@ -1,4 +1,4 @@
-# SpringBoot_Peliculas UPLOADED AT HEROKU https://springbootpeliculas.herokuapp.com
+# SpringBoot_Peliculas UPLOADED AT HEROKU
 ***NOTA IMPORTANTE***  PROYECTO EN PROCESO
 
 ***El proyecto se puede inicializar desde Heroku, ademas de Spring Tool.***
