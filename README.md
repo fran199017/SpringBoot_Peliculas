@@ -3,7 +3,7 @@
 
 ***El proyecto se puede inicializar desde Heroku, ademas de Spring Tool.***
 
-***Hay que crear la DB dbpeliculas2. Para ello he utilizado WampServer con PHPMyAdmin. ***
+*Hay que crear la DB dbpeliculas2. Para ello he utilizado WampServer con PHPMyAdmin. 
 
 *El usuario es root y la password vacia (como viene por defecto). Para cambiarlo en el proyecto solo bastaria con cambiarlo en el application.properties.
 
