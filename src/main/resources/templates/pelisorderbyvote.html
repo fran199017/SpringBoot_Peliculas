@@ -12,10 +12,7 @@
 <title>Peliculas</title>
 </head>
 <body>
-<script
-		src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script
-		src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 			<div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -30,48 +27,51 @@
 						aria-haspopup="true" aria-expanded="false"> Películas </a>
 						<div class="dropdown-menu"
 							aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="/app/pelis">Listado de películas</a> 
-								<a class="dropdown-item" href="/app/pelisorderbyvote">Listado de películas ordenadas por puntuacion</a> 
-								<a class="dropdown-item" href="/app/pelisorderbyname">Listado de películas ordenadas por nombre</a>
-								<a class="dropdown-item" href="/api/peliculas/1">Filtro de pelicula por ID(seleccionar ID en url, por defecto 1)</a>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/swagger-ui.html#/api-rest-controller">Swagger Documentation</a>
-					</li>
-					
-					<li class="nav-item">
-						<a class="nav-link" href="https://github.com/fran199017/SpringBoot_Peliculas/blob/master/README.md">Instrucciones de uso</a>
-					</li>
-						
- 
+							<a class="dropdown-item" href="/app/pelis">Listado de
+								películas</a> <a class="dropdown-item" href="/app/pelisorderbyvote">Listado
+								de películas ordenadas por puntuacion</a> <a class="dropdown-item"
+								href="/app/pelisorderbyname">Listado de películas ordenadas
+								por nombre</a> <a class="dropdown-item" href="/api/peliculas/1">Filtro
+								de pelicula por ID(seleccionar ID en url, por defecto 1)</a>
+						</div></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/swagger-ui.html#/api-rest-controller">Swagger
+							Documentation</a></li>
+
+					<li class="nav-item"><a class="nav-link"
+						href="https://github.com/fran199017/SpringBoot_Peliculas/blob/master/README.md">Instrucciones
+							de uso</a></li>
+
+
 				</ul>
 			</div>
 		</nav>
 
 	</header>
 
-	<h1>Listado de peliculas odenadas por votacion</h1>
+	<div class="container">
+		<h1>Listado de peliculas odenadas por votacion</h1>
 
-	<table class="table ">
-		<thead class="thead-dark">
+		<table class="table table-striped">
+			<thead class="thead-dark">
 
-			<tr>
-			
-				<th scope="col">Vote</th>
-				<th scope="col">Nombre</th>
+				<tr>
+
+					<th scope="col">Vote</th>
+					<th scope="col">Nombre</th>
+				</tr>
+			</thead>
+
+			<tr th:each="pelicula: ${pelicula}">
+
+				<td><span th:text="${pelicula.vote}">Vote</span></td>
+				<td><span th:text="${pelicula.nombre}">Nombre</span></td>
 			</tr>
-		</thead>
 
-		<tr th:each="pelicula: ${pelicula}">
-	
-			<td><span th:text="${pelicula.vote}">Vote</span></td>
-			<td><span th:text="${pelicula.nombre}">Nombre</span></td>
-		</tr>
+		</table>
+	</div>
 
-	</table>
-	
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 		crossorigin="anonymous"></script>
@@ -83,6 +83,10 @@
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
+	<script
+		src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script
+		src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
 </body>
 </html>
