@@ -12,11 +12,17 @@ import com.fran.app.controllers.entity.Pelicula;
 public interface IPeliculaService {
 
 
-	public List<Pelicula> todasPeliculas();
-	public List<Pelicula> orderbyvote();
-	public List<Pelicula> orderbyname();
-	public List<Pelicula> todasPeliculas2(String name);
+	public List<Pelicula> listarPeliculas();
+	public List<Pelicula> listarPeliculasPorNombre();
+	public List<Pelicula> listarPeliculasPorVote();
+	
 	public Optional<Pelicula> getById(Long id);
+
+
+
+
+
+	
 
 	
 }

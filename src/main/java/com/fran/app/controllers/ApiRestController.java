@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,8 +33,6 @@ public class ApiRestController {
 	@Autowired
 	private IPeliculaService peliculaService;
 
-	@Autowired
-	private IActorService actorService;
 
 	// Metodos
 	@GetMapping("/insert")
@@ -52,30 +51,11 @@ public class ApiRestController {
 		return "Registros insertados, ya puedes volver atras a visualizarlo";
 	}
 
-	@GetMapping("/peliculas")
-	public List<Pelicula> peliculas() {
-		return peliculaService.todasPeliculas();
-	}
-
-	@GetMapping("/actores")
-	public List<Actor> actores() {
-		return actorService.todosActores();
-	}
-
-	@GetMapping("/peliculasordenadasvote")
-	public List<Pelicula> peliculasOrdenadasVote() {
-		return peliculaService.orderbyvote();
-	}
-
-	@GetMapping("/peliculasordenadasnombre")
-	public List<Pelicula> peliculasOrdenadasNombre() {
-		return peliculaService.orderbyname();
-	}
-	
 	@GetMapping("/peliculas/{Id}")
 	public Optional<Pelicula> findById(@PathVariable Long Id) {
 		return peliculaService.getById(Id);
 	}
 	
+
 
 }

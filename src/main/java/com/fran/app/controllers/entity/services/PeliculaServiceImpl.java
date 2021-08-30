@@ -1,10 +1,14 @@
 package com.fran.app.controllers.entity.services;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,43 +22,86 @@ public class PeliculaServiceImpl implements IPeliculaService {
 	@Autowired
 	private IPeliculaDAO peliculaDAO;
 	
-	//Metodos
-	@Override	
-	@Transactional  //Nos permite realizar la transaccion.
-	public List<Pelicula> todasPeliculas() {
-		
-		return (List<Pelicula>) peliculaDAO.findAll();
-	}
+	@Autowired
+	JdbcTemplate jdbc = new JdbcTemplate();
+	
+	//Metodos	
 
-	@Override
-	@Transactional
-	public List<Pelicula> orderbyvote() {
-		
-		return (List<Pelicula>) peliculaDAO.findAll(Sort.by("vote").descending());
-	}
 	
 	@Override
-	@Transactional
-	public List<Pelicula> orderbyname() {
-		
-		return (List<Pelicula>) peliculaDAO.findAll(Sort.by("nombre").ascending());
-	}
+	 public List<Pelicula> listarPeliculas() {
 
+	        String sql = "SELECT * FROM peliculas";
+
+	        List<Pelicula> peliculas = new ArrayList<>();
+
+	        List<Map<String, Object>> rows = jdbc.queryForList(sql);
+
+	        for (Map row : rows) {
+	            Pelicula obj = new Pelicula();
+	            
+	            obj.setId(((Long) row.get("id")));
+	            obj.setNombre(((String) row.get("nombre")));
+	            obj.setVote((Double) row.get("vote"));
+	          
+	            peliculas.add(obj);
+	     
+	        }
+
+	        return peliculas;
+	    }
+	
+	@Override
+	 public List<Pelicula> listarPeliculasPorNombre() {
+
+	        String sql = "SELECT * FROM peliculas order by nombre asc";
+
+	        List<Pelicula> peliculas = new ArrayList<>();
+
+	        List<Map<String, Object>> rows = jdbc.queryForList(sql);
+
+	        for (Map row : rows) {
+	            Pelicula obj = new Pelicula();
+	            
+	            obj.setNombre(((String) row.get("nombre")));
+	            obj.setVote((Double) row.get("vote"));
+	          
+	            peliculas.add(obj);
+	     
+	        }
+
+	        return peliculas;
+	    }
+
+	
+	@Override
+	 public List<Pelicula> listarPeliculasPorVote() {
+
+	        String sql = "SELECT * FROM peliculas order by vote desc";
+
+	        List<Pelicula> peliculas = new ArrayList<>();
+
+	        List<Map<String, Object>> rows = jdbc.queryForList(sql);
+
+	        for (Map row : rows) {
+	            Pelicula obj = new Pelicula();
+	            
+	            obj.setNombre(((String) row.get("nombre")));
+	            obj.setVote((Double) row.get("vote"));
+	          
+	            peliculas.add(obj);
+	     
+	        }
+
+	        return peliculas;
+	    }
+	
 	@Override
 	@Transactional
 	public Optional<Pelicula> getById(Long Id) {
 		return peliculaDAO.findById(Id);
 	}
-	
-	@Override
-	public List<Pelicula> todasPeliculas2(String name) {
-		return (List<Pelicula>) peliculaDAO.findAll();
-	}
-	
 
-
-
-	
 
 	
 }

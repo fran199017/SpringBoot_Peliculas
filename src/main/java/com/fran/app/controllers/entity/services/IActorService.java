@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import com.fran.app.controllers.entity.Actor;
 
 @Service
-public interface IActorService {
-
-	public List<Actor> todosActores();
+public interface IActorService {	
 	
+	//Metodos
+	public List<Actor> listarActores();	
 }
