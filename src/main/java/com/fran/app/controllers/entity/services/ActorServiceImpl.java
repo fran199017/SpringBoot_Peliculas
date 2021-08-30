@@ -39,6 +39,7 @@ public class ActorServiceImpl implements IActorService {
 	            obj.setId(((Long) row.get("id")));
 	            obj.setNombre(((String) row.get("nombre")));
 	            obj.setLugarNacimiento(((String) row.get("lugarnacimiento")));
+	            obj.setImage((String) row.get("image"));
 	         
 	            actores.add(obj);
 	     

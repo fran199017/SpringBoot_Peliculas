@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import com.fran.app.controllers.entity.Actor;
 import com.fran.app.controllers.entity.Pelicula;
 import com.fran.app.controllers.entity.services.IActorService;
@@ -30,7 +32,7 @@ public class IndexController {
 	
 	@GetMapping("/pelis")
 	public String pelis(Model modelo){
-		
+
 		List<Pelicula> peliculas= peliculaService.listarPeliculas();
 		modelo.addAttribute("pelicula",peliculas);
 		

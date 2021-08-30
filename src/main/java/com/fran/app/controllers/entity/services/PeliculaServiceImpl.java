@@ -2,6 +2,7 @@ package com.fran.app.controllers.entity.services;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -42,7 +43,9 @@ public class PeliculaServiceImpl implements IPeliculaService {
 	            
 	            obj.setId(((Long) row.get("id")));
 	            obj.setNombre(((String) row.get("nombre")));
-	            obj.setVote((Double) row.get("vote"));
+	            obj.setVote((Double) row.get("vote"));   
+	            obj.setImage((String) row.get("image"));
+	            
 	          
 	            peliculas.add(obj);
 	     

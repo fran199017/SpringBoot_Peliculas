@@ -7,9 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
-
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.hibernate.annotations.Type;
 
 @Entity
@@ -33,14 +34,29 @@ public class Pelicula implements Serializable {
 	@Column(name = "overview")
 	@Type(type="text")
 	private String overview;
+	
+	@Column(name= "image")
+	private String image;
 
 	
 	//settersgetters
 	
 	
+	
 	public String getNombre() {
 		return nombre;
 	}
+
+
+	public String getImage() {
+		return image;
+	}
+
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
 
 	public void setId(Long id) {
 		this.id = id;
@@ -69,5 +85,6 @@ public class Pelicula implements Serializable {
 	public void setOverview(String overview) {
 		this.overview = overview;
 	}
+	
 
 }

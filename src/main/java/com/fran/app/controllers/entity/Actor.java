@@ -35,6 +35,9 @@ public class Actor implements Serializable {
 	@Column(name="lugarnacimiento")
 	private String lugarNacimiento;
 	
+	@Column(name= "image")
+	private String image;
+	
 
 	//SettersGetters
 	
@@ -42,6 +45,14 @@ public class Actor implements Serializable {
 		public String getNombre() {
 		return nombre;
 	}
+
+	public String getImage() {
+			return image;
+		}
+
+		public void setImage(String image) {
+			this.image = image;
+		}
 
 	public Long getId() {
 			return id;

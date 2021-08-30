@@ -50,10 +50,11 @@ public class RestService {
 					for (int i = 0; i < arr.length(); i++)
 					{
 						
+						
 					    String original_title = arr.getJSONObject(i).getString("original_title");
 					    double vote_average = arr.getJSONObject(i).getDouble("vote_average");
-					    String overview= arr.getJSONObject(i).getString("overview");
-					    
+					    String overview= arr.getJSONObject(i).getString("overview");			    
+					    String pathImage=  arr.getJSONObject(i).getString("backdrop_path");
 					    
 					    System.out.println(original_title);
 					    System.out.println(vote_average);
@@ -64,9 +65,9 @@ public class RestService {
 
 					    	original_title= original_title.replace("'"," ");
 					    	overview= overview.replace("'"," ");    	
-					    	jdbc.execute("insert into peliculas(nombre,overview,vote)values('"+original_title+"',"+"'"+overview+"',"+"'"+vote_average+"')");
+					    	jdbc.execute("insert into peliculas(nombre,overview,vote,image)values('"+original_title+"',"+"'"+overview+"',"+"'"+vote_average+"',"+"'"+pathImage+"')");
 					    }else {
-					    	jdbc.execute("insert into peliculas(nombre,overview,vote)values('"+original_title+"',"+"'"+overview+"',"+"'"+vote_average+"')");
+					    	jdbc.execute("insert into peliculas(nombre,overview,vote,image)values('"+original_title+"',"+"'"+overview+"',"+"'"+vote_average+"',"+"'"+pathImage+"')");
 				    	}
 			    	    
 					}//for
@@ -101,7 +102,7 @@ public class RestService {
 			JSONObject obj = new JSONObject(jsonString);
 
 
-			
+			 String pathImage;
 			 String nombre = obj.getString("name");
 			 String nacimiento;
 			 String lugarnacimiento;
@@ -115,6 +116,13 @@ public class RestService {
 			 }
 			 
 			  LocalDate fechanacimiento= LocalDate.parse(nacimiento);
+			  
+			//Controlamos  nulos, ya que hay actores que no tienen lugar de nacimiento.
+			  if (obj.has("profile_path") && !obj.isNull("profile_path")){
+				  pathImage= obj.getString("profile_path");
+			 } else {
+				 pathImage= "null";
+			 }
 			 
 			  
 			//Controlamos  nulos, ya que hay actores que no tienen lugar de nacimiento.
@@ -123,6 +131,8 @@ public class RestService {
 			 } else {
 				 lugarnacimiento= "null";
 			 }
+			  
+			  
 			
 			    System.out.println(nombre);
 			    System.out.println(fechanacimiento);
@@ -133,9 +143,9 @@ public class RestService {
 
 			    	nombre= nombre.replace("'"," ");
 			    	lugarnacimiento= lugarnacimiento.replace("'"," ");    	
-			    	jdbc.execute("insert into actores(nombre,nacimiento,lugarnacimiento)values('"+nombre+"',"+"'"+fechanacimiento+"',"+"'"+lugarnacimiento+"')");
+			    	jdbc.execute("insert into actores(nombre,nacimiento,lugarnacimiento, image)values('"+nombre+"',"+"'"+fechanacimiento+"',"+"'"+lugarnacimiento+"',"+"'"+pathImage+"')");
 			    }else {
-			    	jdbc.execute("insert into actores(nombre,nacimiento,lugarnacimiento)values('"+nombre+"',"+"'"+fechanacimiento+"',"+"'"+lugarnacimiento+"')");
+			    	jdbc.execute("insert into actores(nombre,nacimiento,lugarnacimiento, image)values('"+nombre+"',"+"'"+fechanacimiento+"',"+"'"+lugarnacimiento+"',"+"'"+pathImage+"')");
 		    	}
 			
 			//Incrementamos la pagina
