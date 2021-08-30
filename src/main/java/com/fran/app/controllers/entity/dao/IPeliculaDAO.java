@@ -1,8 +1,6 @@
 package com.fran.app.controllers.entity.dao;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
-
 import com.fran.app.controllers.entity.Pelicula;
 
 

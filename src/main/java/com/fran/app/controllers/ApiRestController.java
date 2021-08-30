@@ -56,6 +56,4 @@ public class ApiRestController {
 		return peliculaService.getById(Id);
 	}
 	
-
-
 }
