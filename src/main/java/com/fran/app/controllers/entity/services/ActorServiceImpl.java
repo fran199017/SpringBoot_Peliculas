@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.fran.app.controllers.entity.Actor;
-import com.fran.app.controllers.entity.dao.IActorDAO;
 
 
 @Service

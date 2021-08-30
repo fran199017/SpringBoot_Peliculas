@@ -1,22 +1,18 @@
 package com.fran.app.controllers;
 
 import java.text.ParseException;
-import java.util.List;
+
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.fran.app.controllers.entity.Actor;
 import com.fran.app.controllers.entity.Pelicula;
-import com.fran.app.controllers.entity.services.IActorService;
 import com.fran.app.controllers.entity.services.IPeliculaService;
 import com.fran.app.get.RestService;
 

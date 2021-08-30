@@ -117,7 +117,7 @@ public class RestService {
 			 
 			  LocalDate fechanacimiento= LocalDate.parse(nacimiento);
 			  
-			//Controlamos  nulos, ya que hay actores que no tienen lugar de nacimiento.
+			//Controlamos  nulos, ya que hay actores que no foto.
 			  if (obj.has("profile_path") && !obj.isNull("profile_path")){
 				  pathImage= obj.getString("profile_path");
 			 } else {
@@ -131,13 +131,8 @@ public class RestService {
 			 } else {
 				 lugarnacimiento= "null";
 			 }
-			  
-			  
-			
-			    System.out.println(nombre);
-			    System.out.println(fechanacimiento);
-			    System.out.println(lugarnacimiento);
-			    
+			  		
+
 			    //Controlo al tener el error, del caracter " ' " y entonces no insertar ese campo y tampoco mostrar el data inserted.
 			    if(nombre.contains("'") ||lugarnacimiento.contains("'") ) {
 
@@ -150,8 +145,7 @@ public class RestService {
 			
 			//Incrementamos la pagina
 			contadorActores++;
-			
-			
+	
 			
 		}while(contadorActores<40);  //maximo de paginas de la api (He colocado 5 para no tardar tanto, son 982)*/		
 	}

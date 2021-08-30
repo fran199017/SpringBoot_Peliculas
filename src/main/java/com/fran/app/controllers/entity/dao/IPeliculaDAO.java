@@ -1,3 +1,4 @@
+
 package com.fran.app.controllers.entity.dao;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
