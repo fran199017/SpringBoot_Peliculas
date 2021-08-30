@@ -14,6 +14,7 @@
 *Para insertar los datos, basta con utilizar el boton del navbar Insertar datos.
 
 *Aconsejable uso de mozilla para acceder a los listados. (El propio navegador de Spring Tool,  descarga el JSON).
+
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/captura4.png)
 
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/captura1.png)
