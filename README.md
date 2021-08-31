@@ -3,32 +3,17 @@
 
 ***NOTA IMPORTANTE***
 
-***El proyecto se puede inicializar desde Heroku. En spring Tool tambien se puede iniciar(hay que cambiar el archivo de applicationproperties 
-y comentar los datos de Heroku y descomentar los de LocalHost.
+***El proyecto se puede inicializar desde Heroku, ademas de Spring Tool(Heroku  no utiliza el mismo puerto 3306 de localhost).***
 
-***HEROKU DATOS(adjunto imagen debajo)***
-
-Hostname : pei17y9c5bpuh987.chr7pe7iyn
-
-Port: 3306
-
-Username: aozuxonhblckome9
-
-Password: pyrta1ts62xm5arr 
-
-Database: lhlikv9jhwz3svno
-
-***LOCALHOST DATOS(adjunto imagen debajo)
 *Hay que crear la DB dbpeliculas2. Para ello he utilizado WampServer con PHPMyAdmin. 
 
 *El usuario es root y la password vacia (como viene por defecto). Para cambiarlo en el proyecto solo bastaria con cambiarlo en el application.properties.
 
+*Las tablas, se crean solas de las propias entidades y configuradas en el application.properties.
 
-
+*Para insertar los datos, basta con utilizar el boton del navbar Insertar datos.
 
 ***El proyecto incluye:***
-
-*Las tablas, se crean solas de las propias entidades y configuradas en el application.properties.
 
 -Insercion de datos desde la api en la bbdd dbpeliculas2.
 
@@ -42,8 +27,7 @@ Database: lhlikv9jhwz3svno
 
 -Swagger documentation.
 
-![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/Capturadb.png)
-![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/Capturaapplication.png)
+
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/captura4.png)
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/captura1.png)
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/captura2.png)
