@@ -53,8 +53,17 @@ public class RestService {
 						
 					    String original_title = arr.getJSONObject(i).getString("original_title");
 					    double vote_average = arr.getJSONObject(i).getDouble("vote_average");
-					    String overview= arr.getJSONObject(i).getString("overview");			    
-					    String pathImage=  arr.getJSONObject(i).getString("backdrop_path");
+					    String overview= arr.getJSONObject(i).getString("overview");
+					    String pathImage;
+					    
+					  //Controlamos  nulos, ya que hay actores que no foto.
+						  if (arr.getJSONObject(i).has("backdrop_path") && !arr.getJSONObject(i).isNull("backdrop_path")){
+							  pathImage= arr.getJSONObject(i).getString("backdrop_path");
+						 } else {
+							 pathImage= "null";
+						 }
+					    
+					    
 					    
 					    System.out.println(original_title);
 					    System.out.println(vote_average);
