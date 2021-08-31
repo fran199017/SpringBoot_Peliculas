@@ -13,7 +13,7 @@
 
 *Para insertar los datos, basta con utilizar el boton del navbar Insertar datos.
 
-
+![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/Captura4.png)
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/captura1.png)
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/captura2.png)
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/captura3.png)
