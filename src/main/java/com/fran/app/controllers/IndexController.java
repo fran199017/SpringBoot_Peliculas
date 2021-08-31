@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import com.fran.app.controllers.entity.Actor;
 import com.fran.app.controllers.entity.Pelicula;
 import com.fran.app.controllers.entity.services.IActorService;
@@ -29,9 +31,14 @@ public class IndexController {
 	}
 	
 	@GetMapping("/pelis")
-	public String pelis(Model modelo){
+	public String pelis(Model modelo,
+			@RequestParam(defaultValue = "0") Integer pageNo, 
+            @RequestParam(defaultValue = "30") Integer pageSize,
+            @RequestParam(defaultValue = "id") String sortBy)
+	{
 
-		List<Pelicula> peliculas= peliculaService.listarPeliculas();
+		List<Pelicula> peliculas= peliculaService.listarPeliculas(pageNo, pageSize, sortBy);
+		
 		modelo.addAttribute("pelicula",peliculas);
 		
 		return "pelis";

@@ -1,13 +1,14 @@
 package com.fran.app.controllers.entity.services;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Base64;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
@@ -30,8 +31,12 @@ public class PeliculaServiceImpl implements IPeliculaService {
 
 	
 	@Override
-	 public List<Pelicula> listarPeliculas() {
+	 public List<Pelicula> listarPeliculas(Integer pageNo, Integer pageSize, String sortBy) {
 
+		 Pageable paging = PageRequest.of(pageNo, pageSize, Sort.by(sortBy));
+		 Page<Pelicula> pagedResult = peliculaDAO.findAll(paging);
+		 
+		 
 	        String sql = "SELECT * FROM peliculas";
 
 	        List<Pelicula> peliculas = new ArrayList<>();
@@ -50,8 +55,15 @@ public class PeliculaServiceImpl implements IPeliculaService {
 	            peliculas.add(obj);
 	     
 	        }
+	        
+	        if(pagedResult.hasContent()) {
+	            return pagedResult.getContent();
+	        } else {
+	            return peliculas;
+	        }
+	        
 
-	        return peliculas;
+	        //return peliculas;
 	    }
 	
 	@Override

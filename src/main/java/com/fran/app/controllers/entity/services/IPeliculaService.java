@@ -12,7 +12,7 @@ import com.fran.app.controllers.entity.Pelicula;
 public interface IPeliculaService {
 
 
-	public List<Pelicula> listarPeliculas();
+	public List<Pelicula> listarPeliculas(Integer pageNo, Integer pageSize, String sortBy);
 	public List<Pelicula> listarPeliculasPorNombre();
 	public List<Pelicula> listarPeliculasPorVote();
 	
