@@ -20,8 +20,11 @@ El proyecto incluye:
 -Listado de actores.
 
 -Listado de películas(con paginación).
+
 -Listado de peliculas ordenadas por votacion y por nombre.
+
 -Peliculas por ID en formato JSON.
+
 -Swagger documentation.
 
 
