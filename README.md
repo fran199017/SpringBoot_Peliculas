@@ -3,7 +3,7 @@
 
 ***NOTA IMPORTANTE***
 
-***El proyecto se puede inicializar desde Heroku, ademas de Spring Tool.(Heroku  no utiliza el mismo puerto 3306 de localhost)***
+***El proyecto se puede inicializar desde Heroku, ademas de Spring Tool(Heroku  no utiliza el mismo puerto 3306 de localhost).***
 
 *Hay que crear la DB dbpeliculas2. Para ello he utilizado WampServer con PHPMyAdmin. 
 
