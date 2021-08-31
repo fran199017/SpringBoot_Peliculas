@@ -42,7 +42,8 @@ Database: lhlikv9jhwz3svno
 
 -Swagger documentation.
 
-
+![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/Capturadb.png)
+![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/Capturaapplication.png)
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/captura4.png)
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/captura1.png)
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/captura2.png)
