@@ -1,7 +1,7 @@
 # SpringBoot_Peliculas UPLOADED AT HEROKU https://springbootpeliculas.herokuapp.com
 
-
-***NOTA IMPORTANTE***
+Config
+---------------------------------------
 
 ***El proyecto se puede inicializar desde Heroku, ademas de Spring Tool(desde Heroku no se puede ver la inserción en la BBDD, desde SpringTool en localhost si).***
 
@@ -14,6 +14,7 @@
 *Para insertar los datos, basta con utilizar el boton del navbar Insertar datos.
 
 ***El proyecto incluye:***
+---------------------------------------------
 
 -Insercion de datos desde la api en la bbdd dbpeliculas2.
 
@@ -27,6 +28,8 @@
 
 -Swagger documentation.
 
+Images
+---------------------------------------------
 Listado de peliculas
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/captura4.png)
 
