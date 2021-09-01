@@ -5,11 +5,11 @@
 
 ***El proyecto se puede inicializar desde Heroku, ademas de Spring Tool(desde Heroku no se puede ver la inserción en la BBDD, desde SpringTool en localhost si).***
 
-*Hay que crear la DB dbpeliculas2. Para ello he utilizado WampServer con PHPMyAdmin. 
-
 *El usuario es root y la password vacia (como viene por defecto). Para cambiarlo en el proyecto solo bastaria con cambiarlo en el application.properties.
 
-*Las tablas, se crean solas de las propias entidades y configuradas en el application.properties.
+*Hay que crear la DB dbpeliculas2 
+
+*Las tablas, se crean solas configuradas en el application.properties.
 
 *Para insertar los datos, basta con utilizar el boton del navbar Insertar datos.
 
@@ -27,10 +27,17 @@
 
 -Swagger documentation.
 
-
+Listado de peliculas
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/captura4.png)
+
+Application.properties
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/Capturaapplication.png)
+
+MySQL Workbench Heroku Config(en caso de necesitarlo)
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/Capturadb.png)
+
+Swagger GETs
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/captura1.png)
+
+Swagger Response
 ![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/captura2.png)
-![ScreenShot](https://raw.githubusercontent.com/fran199017/SpringBoot_Peliculas/master/assets/captura3.png)
